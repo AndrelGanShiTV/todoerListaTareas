@@ -79,7 +79,7 @@ def update(id):
             db, c = get_db()
             c.execute(
                 'UPDATE todo SET description = %s, completed = %s'
-                ' WHERE id = %s and created_by = %',
+                ' WHERE id = %s and created_by = %s',
                 (description, completed, id, g.user['id'])
             )
             db.commit()
